@@ -1,17 +1,17 @@
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import { GluestackUIProvider, Box, Text } from "@gluestack-ui/themed";
-import { config } from "@gluestack-ui/config";
+import { GluestackUIProvider } from "@gluestack-ui/themed";
+import { config } from "./src/config/gluestack-ui.config";
+
+import { Main } from "./src/screens/Main/Main";
 
 export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView>
         <GluestackUIProvider config={config}>
-          <Box width="100%" justifyContent="center" alignItems="center">
-            <Text>Open up App.js to start working on your app!</Text>
-            <StatusBar translucent />
-          </Box>
+          <Main />
+          <StatusBar translucent />
         </GluestackUIProvider>
       </SafeAreaView>
     </SafeAreaProvider>
